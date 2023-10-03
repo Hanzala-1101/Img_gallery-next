@@ -7,6 +7,7 @@ const global = (props) => {
   const [photo1, setphoto1] = useState([]);
   const [photo2, setphoto2] = useState([]);
   const [photo3, setphoto3] = useState([]);
+  const [open, setopen] = useState(null);
 
   const [sea, setsea] = useState("flower");
   const [pagen, setpagen] =useState(1);
@@ -55,7 +56,7 @@ const global = (props) => {
   return (
     <>
       <contextProvider.Provider
-        value={{pagen, run, sea, setsearch, photo, photo1, photo2, photo3, setpagemore}}
+        value={{pagen, run, sea, setsearch, photo, photo1, photo2, photo3, setpagemore, open, setopen}}
       >
         {props.children}
       </contextProvider.Provider>
